@@ -1,0 +1,11 @@
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\bin\Debug\net10.0\RecipeManagement.Core.deps.json
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\bin\Debug\net10.0\RecipeManagement.Core.dll
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\bin\Debug\net10.0\RecipeManagement.Core.pdb
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\obj\Debug\net10.0\RecipeManagement.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\obj\Debug\net10.0\RecipeManagement.Core.AssemblyInfoInputs.cache
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\obj\Debug\net10.0\RecipeManagement.Core.AssemblyInfo.cs
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\obj\Debug\net10.0\RecipeManagement.Core.csproj.CoreCompileInputs.cache
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\obj\Debug\net10.0\RecipeManagement.Core.dll
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\obj\Debug\net10.0\refint\RecipeManagement.Core.dll
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\obj\Debug\net10.0\RecipeManagement.Core.pdb
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\obj\Debug\net10.0\ref\RecipeManagement.Core.dll
