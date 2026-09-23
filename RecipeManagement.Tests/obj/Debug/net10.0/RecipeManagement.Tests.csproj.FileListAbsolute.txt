@@ -98,3 +98,4 @@ C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeMana
 C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Tests\obj\Debug\net10.0\RecipeManagement.Tests.pdb
 C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Tests\obj\Debug\net10.0\RecipeManagement.Tests.genruntimeconfig.cache
 C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Tests\obj\Debug\net10.0\ref\RecipeManagement.Tests.dll
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Tests\obj\Debug\net10.0\RecipeManagement.Tests.sourcelink.json

@@ -17,3 +17,4 @@ C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeMana
 C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Application\obj\Debug\net10.0\RecipeManagement.Application.pdb
 C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Application\obj\Debug\net10.0\RecipeManagement.Application.genruntimeconfig.cache
 C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Application\obj\Debug\net10.0\ref\RecipeManagement.Application.dll
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Application\obj\Debug\net10.0\RecipeManagement.Application.sourcelink.json

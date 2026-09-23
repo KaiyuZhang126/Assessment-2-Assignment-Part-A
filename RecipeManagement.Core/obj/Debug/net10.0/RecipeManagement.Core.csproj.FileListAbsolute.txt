@@ -9,3 +9,4 @@ C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeMana
 C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\obj\Debug\net10.0\refint\RecipeManagement.Core.dll
 C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\obj\Debug\net10.0\RecipeManagement.Core.pdb
 C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\obj\Debug\net10.0\ref\RecipeManagement.Core.dll
+C:\Users\ky\Pictures\comp2021\RecipeManagerSuppliedCode\RecipeManager\RecipeManagement.Core\obj\Debug\net10.0\RecipeManagement.Core.sourcelink.json
