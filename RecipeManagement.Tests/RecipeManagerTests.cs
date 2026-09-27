@@ -39,6 +39,17 @@ public sealed class RecipeManagerTests
         Assert.Equal(new[] { 20 }, manager.GetCookingPlan());
     }
 
+    [Fact]
+    public void AddIngredientsToShoppingList_ExistingRecipe_AddsCorrectly()
+    {
+        var manager = CreateManager();
+        int addedCount = manager.AddIngredientsToShoppingList(10);
+
+        Assert.Equal(1, addedCount);
+        Assert.Equal(1, manager.ShoppingItemCount);
+        Assert.Equal("1 apple", manager.GetShoppingList()[0]);
+    }
+
     private static RecipeManager CreateManager()
     {
         return new RecipeManager(new[]
