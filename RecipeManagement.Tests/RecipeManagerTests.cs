@@ -51,15 +51,57 @@ public sealed class RecipeManagerTests
     }
 
     [Fact]
+    // Test for clearing the shopping list (List<string>)
+    // Verifies that ClearShoppingList removes all items from the list
     public void ClearShoppingList_AfterAddingItems_ClearsAll()
     {
+        // Arrange: create manager and add ingredients to shopping list
         var manager = CreateManager();
         manager.AddIngredientsToShoppingList(10);
 
+        // Act: clear all items from the shopping list
         manager.ClearShoppingList();
 
+        // Assert: item count is 0 and the list is empty
         Assert.Equal(0, manager.ShoppingItemCount);
         Assert.Empty(manager.GetShoppingList());
+    }
+
+
+    [Fact]
+    // Test for duplicate recipe ID in the Dictionary catalogue
+    // Verifies that adding a recipe with an existing ID fails and keeps count unchanged
+    public void AddRecipe_DuplicateId_ReturnsFalse()
+    {
+        // Arrange: create manager with recipe ID 10 already existing
+        var manager = CreateManager();
+        var duplicateRecipe = new Recipe { Id = 10, Title = "Duplicate Recipe" };
+
+        // Act: try to add a recipe with the same duplicate ID
+        bool result = manager.AddRecipe(duplicateRecipe);
+
+        // Assert: add returns false, total recipe count stays at 2
+        Assert.False(result);
+        Assert.Equal(2, manager.RecipeCount);
+    }
+
+
+    [Fact]
+    public void AddRecipeToCookingPlan_DuplicateRecipe_ReturnsFalse()
+    {
+        var manager = CreateManager();
+
+        // First attempt to add recipe 10 to cooking plan
+        bool firstAdd = manager.AddRecipeToCookingPlan(10);
+        // Second attempt to add the same recipe 10 again
+        bool secondAdd = manager.AddRecipeToCookingPlan(10);
+
+        // First addition should succeed
+        Assert.True(firstAdd);
+        // Second addition with duplicate ID should fail
+        Assert.False(secondAdd);
+        // Cooking plan count should remain 1
+        Assert.Equal(1, manager.CookingPlanCount);
     }
 
     private static RecipeManager CreateManager()
