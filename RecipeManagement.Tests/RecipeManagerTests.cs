@@ -26,6 +26,7 @@ public sealed class RecipeManagerTests
         Assert.Equal("Second step", manager.PeekNextInstruction());
     }
 
+    // Verifies LIFO behaviour of the removed recipe stack: last removed is first restored
     [Fact]
     public void RemovedRecipesAreRestoredLastInFirstOut()
     {
@@ -38,7 +39,8 @@ public sealed class RecipeManagerTests
         Assert.True(manager.RestoreLastRemovedRecipe());
         Assert.Equal(new[] { 20 }, manager.GetCookingPlan());
     }
-
+    
+    // Verifies ingredients are correctly added to the shopping list
     [Fact]
     public void AddIngredientsToShoppingList_ExistingRecipe_AddsCorrectly()
     {
@@ -51,18 +53,16 @@ public sealed class RecipeManagerTests
     }
 
     [Fact]
-    // Test for clearing the shopping list (List<string>)
+    // Test for clearing the shopping list
     // Verifies that ClearShoppingList removes all items from the list
     public void ClearShoppingList_AfterAddingItems_ClearsAll()
     {
         // Arrange: create manager and add ingredients to shopping list
         var manager = CreateManager();
         manager.AddIngredientsToShoppingList(10);
-
-        // Act: clear all items from the shopping list
+        
+        //clear all items from the shopping list
         manager.ClearShoppingList();
-
-        // Assert: item count is 0 and the list is empty
         Assert.Equal(0, manager.ShoppingItemCount);
         Assert.Empty(manager.GetShoppingList());
     }
@@ -77,7 +77,6 @@ public sealed class RecipeManagerTests
         var manager = CreateManager();
         var duplicateRecipe = new Recipe { Id = 10, Title = "Duplicate Recipe" };
 
-        // Act: try to add a recipe with the same duplicate ID
         bool result = manager.AddRecipe(duplicateRecipe);
 
         // Assert: add returns false, total recipe count stays at 2
@@ -134,10 +133,7 @@ public sealed class RecipeManagerTests
     public void RemoveRecipe_InCookingPlan_ReturnsFalseAndRemainsInCatalogue()
     {
         var manager = CreateManager();
-        // Add recipe 10 to cooking plan first
         manager.AddRecipeToCookingPlan(10);
-
-        // Try to remove recipe 10 from the catalogue
         bool removeResult = manager.RemoveRecipe(10);
 
         // Remove should fail because recipe is in cooking plan
