@@ -104,6 +104,50 @@ public sealed class RecipeManagerTests
         Assert.Equal(1, manager.CookingPlanCount);
     }
 
+        [Fact]
+    public void EmptyRemovedRecipeStack_InitialState_ReturnsExpected()
+    {
+        var manager = CreateManager();
+
+        // Peek on empty stack should return null
+        Assert.Null(manager.PeekLastRemovedRecipe());
+        // Restore on empty stack should return false
+        Assert.False(manager.RestoreLastRemovedRecipe());
+        // Removed recipe count should be 0
+        Assert.Equal(0, manager.RemovedRecipeCount);
+    }
+
+        [Fact]
+    public void EmptyInstructionQueue_InitialState_ReturnsExpected()
+    {
+        var manager = CreateManager();
+
+        // Peek on empty queue should return null
+        Assert.Null(manager.PeekNextInstruction());
+        // Complete on empty queue should return null
+        Assert.Null(manager.CompleteNextInstruction());
+        // Pending instruction count should be 0
+        Assert.Equal(0, manager.PendingInstructionCount);
+    }
+
+        [Fact]
+    public void RemoveRecipe_InCookingPlan_ReturnsFalseAndRemainsInCatalogue()
+    {
+        var manager = CreateManager();
+        // Add recipe 10 to cooking plan first
+        manager.AddRecipeToCookingPlan(10);
+
+        // Try to remove recipe 10 from the catalogue
+        bool removeResult = manager.RemoveRecipe(10);
+
+        // Remove should fail because recipe is in cooking plan
+        Assert.False(removeResult);
+        // Recipe should still exist in the catalogue
+        Assert.NotNull(manager.FindRecipe(10));
+        // Total recipe count remains unchanged
+        Assert.Equal(2, manager.RecipeCount);
+    }
+
     private static RecipeManager CreateManager()
     {
         return new RecipeManager(new[]
